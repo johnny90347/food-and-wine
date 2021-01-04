@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+$custom-typography: mat-typography-config($font-family: 'Roboto,Helvetica Neue,sans-serif');
+@include angular-material-typography($custom-typography);
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-progress-spinner circle,
+.mat-spinner circle {
+    stroke: rgb(184, 184, 184);
+}
