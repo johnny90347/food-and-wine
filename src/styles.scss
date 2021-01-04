@@ -1,25 +1,29 @@
+// font
+@font-face {
+  font-family: DFT_W7;
+  src: url(assets/font/DFT_W7.TTF) format("opentype");
+}
+
 @import '~@angular/material/theming';
-$custom-typography: mat-typography-config($font-family: 'Roboto,Helvetica Neue,sans-serif');
+$custom-typography: mat-typography-config($font-family: 'DFT_W7,Helvetica Neue,sans-serif');
 @include angular-material-typography($custom-typography);
+
+
 
 * {
     box-sizing: border-box;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    font-family: DFT_W7, "Helvetica Neue", sans-serif;
 }
 
-html {
-    font-size: 10px;
-}
 
 html,
 body {
     height: 100%;
 }
 
-
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-}
 
 .mat-progress-spinner circle,
 .mat-spinner circle {
