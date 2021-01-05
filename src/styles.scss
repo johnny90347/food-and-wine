@@ -1,21 +1,21 @@
 // font
 @font-face {
-  font-family: DFT_W7;
-  src: url(assets/font/DFT_W7.TTF) format("opentype");
+    font-family: NotoSerifTC_Regular;
+    src: url(assets/font/NotoSerifTC-Regular.otf) format("opentype");
 }
 
 @import '~@angular/material/theming';
-$custom-typography: mat-typography-config($font-family: 'DFT_W7,Helvetica Neue,sans-serif');
+$custom-typography: mat-typography-config($font-family: 'NotoSerifTC_Regular,Helvetica Neue,sans-serif');
 @include angular-material-typography($custom-typography);
 
 
 
 * {
     box-sizing: border-box;
-    font-size: 20px;
+    font-size: 18px;
     margin: 0;
     padding: 0;
-    font-family: DFT_W7, "Helvetica Neue", sans-serif;
+    font-family: NotoSerifTC_Regular, "Helvetica Neue", sans-serif;
 }
 
 
