@@ -22,6 +22,9 @@ $custom-typography: mat-typography-config($font-family: 'NotoSerifTC_ExtraLight,
 html,
 body {
     height: 100%;
+    background-color: black;
+    max-width: 1800px;
+    margin: 0 auto;
 }
 
 
