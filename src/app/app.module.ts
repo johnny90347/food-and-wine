@@ -12,12 +12,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { DataSourceService } from './services/data-source.service';
 // store
 import { StoreModule } from '@ngrx/store';
+import { BannerComponent } from './components/banner/banner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
-    HeaderComponent
+    HeaderComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
