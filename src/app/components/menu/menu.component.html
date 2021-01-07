@@ -1,49 +1,25 @@
 <section id="menu">
-    <div class="container">
-        <!-- 左半區 -->
-        <div class="left-area">
-            <div class="item-group">
-                <div class="subject">豚</div>
-                <div class="food-item">
-                    <div class="recommend"></div>
-                    <div class="name">去骨雞腿肉</div>
-                    <div class="price">$100</div>
-                    <div class="taste">鹽·醬</div>
-                </div>
-                <div class="food-item">
-                    <div class="recommend"></div>
-                    <div class="name">去骨雞腿肉</div>
-                    <div class="price">$100</div>
-                    <div class="taste">鹽·醬</div>
-                </div>
-                <div class="food-item">
-                    <div class="recommend"></div>
-                    <div class="name">去骨雞腿肉</div>
-                    <div class="price">$100</div>
-                    <div class="taste">鹽·醬</div>
-                </div>
-                <div class="food-item">
-                    <div class="recommend"></div>
-                    <div class="name">去骨雞腿肉</div>
-                    <div class="price">$100</div>
-                    <div class="taste">鹽·醬</div>
-                </div>
-            </div>
-            <div class="item-group">
-                <div class="subject">豚</div>
-                <div class="food-item">
-                    <div class="recommend"></div>
-                    <div class="name">去骨雞腿肉</div>
-                    <div class="price">$100</div>
-                    <div class="taste">鹽·醬</div>
-                </div>
-            </div>
+  <div class="container">
+    <!-- 左半區 -->
+    <div class="left-area">
+      <div *ngFor="let item of foodListPartOne">
+        <div class="item-group">
+          <div class="subject">{{item.Type}}</div>
+          <div class="food-item"
+               *ngFor="let info of item.FoodInfo">
+            <div class="recommend"></div>
+            <div class="name">{{info.Name}}</div>
+            <div class="price">${{info.Price}}</div>
+            <div class="taste">{{info.Taste}}</div>
+          </div>
         </div>
-        <!-- 中央間隔 -->
-        <div class="mid"></div>
-        <!-- 右半區 -->
-        <div class="right-area">
-
-        </div>
+      </div>
     </div>
+    <!-- 中央間隔 -->
+    <div class="mid"></div>
+    <!-- 右半區 -->
+    <div class="right-area">
+
+    </div>
+  </div>
 </section>

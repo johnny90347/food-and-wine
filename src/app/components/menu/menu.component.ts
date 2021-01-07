@@ -1,4 +1,6 @@
+import { DataSourceService } from './../../services/data-source.service';
 import { Component, OnInit } from '@angular/core';
+import { FoodList } from 'src/app/core/model/model';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  public foodListPartOne: FoodList[];
+
+  constructor(private dataSourceService: DataSourceService) { }
 
   ngOnInit(): void {
+    this.getFoodList();
   }
 
+  /** 取得菜單一號 */
+  private getFoodList() {
+    this.foodListPartOne = this.dataSourceService.getFoodListPartOne()
+  }
 }
