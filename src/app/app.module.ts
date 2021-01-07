@@ -14,6 +14,7 @@ import { DataSourceService } from './services/data-source.service';
 import { StoreModule } from '@ngrx/store';
 import { BannerComponent } from './components/banner/banner.component';
 import { NewsComponent } from './components/news/news.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NewsComponent } from './components/news/news.component';
     MainPageComponent,
     HeaderComponent,
     BannerComponent,
-    NewsComponent
+    NewsComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
