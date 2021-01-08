@@ -1,5 +1,7 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { headerSlideAnimation } from '../../core/animation/animation';
+import * as smoothscroll from "smoothscroll-polyfill";
+
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
@@ -13,7 +15,7 @@ export class MainPageComponent implements OnInit {
   public showPinnedHeader = false; // 顯示置頂
   @ViewChild("myElem") MyProp: ElementRef;
 
-  constructor() { }
+  constructor() { smoothscroll.polyfill(); }
 
   ngOnInit(): void {
   }
