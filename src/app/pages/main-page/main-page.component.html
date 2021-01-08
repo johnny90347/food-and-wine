@@ -1,9 +1,13 @@
 <section id="main-page">
   <app-header></app-header>
+  <!-- 置頂型header -->
   <app-header *ngIf="showPinnedHeader"
               class="pinned"
               [@headerSlideAnimation]></app-header>
+  <!-- 展示圖片 -->
   <app-banner></app-banner>
+  <!-- 最新消息 -->
   <app-news></app-news>
+  <!-- 菜單 -->
   <app-menu></app-menu>
 </section>
