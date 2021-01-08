@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { headerSlideAnimation } from '../../core/animation/animation';
 @Component({
   selector: 'app-main-page',
@@ -11,6 +11,7 @@ import { headerSlideAnimation } from '../../core/animation/animation';
 export class MainPageComponent implements OnInit {
 
   public showPinnedHeader = false; // 顯示置頂
+  @ViewChild("myElem") MyProp: ElementRef;
 
   constructor() { }
 
@@ -20,8 +21,6 @@ export class MainPageComponent implements OnInit {
   /** 滾動監聽 */
   @HostListener("window:scroll", ['$event'])
   onWindowScroll() {
-
-    console.log(window.pageYOffset)
     if (window.pageYOffset >= 100) {
       this.showPinnedHeader = true;
     } else {
@@ -29,4 +28,8 @@ export class MainPageComponent implements OnInit {
     }
   }
 
+  public scrolltest() {
+    this.MyProp.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    // this.foodMenuRef.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 }

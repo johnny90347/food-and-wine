@@ -498,7 +498,7 @@ export class DataSourceService {
       ]
     },
     {
-      Type: "楊物",
+      Type: "揚物",
       FoodInfo: [
         {
           Recommend: false,
