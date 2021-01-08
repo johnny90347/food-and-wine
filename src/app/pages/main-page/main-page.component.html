@@ -1,5 +1,8 @@
 <section id="main-page">
   <app-header></app-header>
+  <app-header *ngIf="showPinnedHeader"
+              class="pinned"
+              [@headerSlideAnimation]></app-header>
   <app-banner></app-banner>
   <app-news></app-news>
   <app-menu></app-menu>

@@ -1,6 +1,9 @@
-import { DataSourceService } from './../../services/data-source.service';
+
 import { Component, OnInit } from '@angular/core';
-import { FoodList } from 'src/app/core/model/model';
+import { FoodList } from '@core/model/model';
+import { DataSourceService } from '@core/services/data-source.service';
+
+
 
 @Component({
   selector: 'app-menu',

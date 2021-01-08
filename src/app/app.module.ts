@@ -9,12 +9,13 @@ import { HeaderComponent } from './components/header/header.component';
 // material 
 import { MatIconModule } from '@angular/material/icon';
 //service
-import { DataSourceService } from './services/data-source.service';
+import { DataSourceService } from '@core/services/data-source.service';
 // store
 import { StoreModule } from '@ngrx/store';
 import { BannerComponent } from './components/banner/banner.component';
 import { NewsComponent } from './components/news/news.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { PinnedHeaderDirective } from './core/directives/pinned-header.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MenuComponent } from './components/menu/menu.component';
     HeaderComponent,
     BannerComponent,
     NewsComponent,
-    MenuComponent
+    MenuComponent,
+    PinnedHeaderDirective
   ],
   imports: [
     BrowserModule,
