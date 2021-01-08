@@ -7,7 +7,9 @@
           <div class="subject">{{item.Type}}</div>
           <div class="food-item"
                *ngFor="let info of item.FoodInfo">
-            <div class="recommend"></div>
+            <div class="recommend">
+              <mat-icon *ngIf="info.Recommend">thumb_up</mat-icon>
+            </div>
             <div class="name">{{info.Name}}</div>
             <div class="price">${{info.Price}}</div>
             <div class="taste">{{info.Taste}}</div>
@@ -19,7 +21,20 @@
     <div class="mid"></div>
     <!-- 右半區 -->
     <div class="right-area">
-
+      <div *ngFor="let item of foodListPartTwo">
+        <div class="item-group">
+          <div class="subject">{{item.Type}}</div>
+          <div class="food-item"
+               *ngFor="let info of item.FoodInfo">
+            <div class="recommend">
+              <mat-icon *ngIf="info.Recommend">thumb_up</mat-icon>
+            </div>
+            <div class="name">{{info.Name}}</div>
+            <div class="price">${{info.Price}}</div>
+            <div class="taste">{{info.Taste}}</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -227,9 +227,63 @@ export class DataSourceService {
           Taste: "鹽·醬",
         },
       ]
-    }
+    },
+    {
+      Type: "飽食",
+      FoodInfo: [
+        {
+          Recommend: false,
+          Name: "白飯",
+          Price: 20,
+        },
+        {
+          Recommend: true,
+          Name: "鮭魚烤飯糰",
+          Price: 70,
+        },
+        {
+          Recommend: false,
+          Name: "明太子烤飯糰",
+          Price: 70,
+        },
+        {
+          Recommend: false,
+          Name: "鮭魚茶泡飯",
+          Price: 80,
+        },
+        {
+          Recommend: false,
+          Name: "明太子茶泡飯",
+          Price: 80,
+        },
+        {
+          Recommend: false,
+          Name: "芝麻烏龍冷面",
+          Price: 100,
+        },
+        {
+          Recommend: false,
+          Name: "月見烏龍麵",
+          Price: 100,
+        },
+        {
+          Recommend: true,
+          Name: "海鮮炒烏龍",
+          Price: 180,
+        },
+        {
+          Recommend: false,
+          Name: "味噌豬肉炒烏龍",
+          Price: 180,
+        },
+        {
+          Recommend: false,
+          Name: "明太子白醬烏龍麵",
+          Price: 180,
+        },
+      ]
+    },
   ]
-
 
   /** 單一調味的菜單 */
   public foodListPartTwo: FoodList[] = [
@@ -423,20 +477,85 @@ export class DataSourceService {
       FoodInfo: [
         {
           Recommend: false,
-          Name: "板腱牛排",
+          Name: "豬五花四季豆",
+          Price: 140,
+        },
+        {
+          Recommend: false,
+          Name: "鮮干貝",
+          Price: 180,
+        },
+        {
+          Recommend: true,
+          Name: "起司竹輪",
+          Price: 120,
+        },
+        {
+          Recommend: false,
+          Name: "洋蔥",
+          Price: 60,
+        },
+      ]
+    },
+    {
+      Type: "楊物",
+      FoodInfo: [
+        {
+          Recommend: false,
+          Name: "日式炸豆腐",
+          Price: 80,
+        },
+        {
+          Recommend: false,
+          Name: "酥炸龍田炸雞",
+          Price: 180,
+        },
+        {
+          Recommend: true,
+          Name: "酥炸雞三角軟骨",
           Price: 160,
-          Taste: "鹽·醬",
+        },
+        {
+          Recommend: true,
+          Name: "炸起司麻糬(甜)",
+          Price: 140,
+        },
+        {
+          Recommend: false,
+          Name: "炸牛蒡絲",
+          Price: 100,
+        },
+        {
+          Recommend: false,
+          Name: "味噌豆腐",
+          Price: 100,
+        },
+      ]
+    },
+    {
+      Type: "湯品",
+      FoodInfo: [
+        {
+          Recommend: true,
+          Name: "酒蒸蛤蠣湯",
+          Price: 120,
+        },
+        {
+          Recommend: false,
+          Name: "魚骨味噌湯",
+          Price: 60,
         },
       ]
     },
   ]
 
-
-
-
-
-
+  /** 取得菜單一號 */
   public getFoodListPartOne(): FoodList[] {
     return this.foodListPartOne;
+  }
+
+  /** 取得菜單二號 */
+  public getFoodListPartTwo(): FoodList[] {
+    return this.foodListPartTwo;
   }
 }

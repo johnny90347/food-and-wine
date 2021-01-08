@@ -9,16 +9,22 @@ import { FoodList } from 'src/app/core/model/model';
 })
 export class MenuComponent implements OnInit {
 
-  public foodListPartOne: FoodList[];
+  public foodListPartOne: FoodList[];//菜單一號
+  public foodListPartTwo: FoodList[];//菜單二號
 
   constructor(private dataSourceService: DataSourceService) { }
 
   ngOnInit(): void {
-    this.getFoodList();
+    this.getFoodListOne();
+    this.getFoodListTwo();
   }
 
   /** 取得菜單一號 */
-  private getFoodList() {
+  private getFoodListOne() {
     this.foodListPartOne = this.dataSourceService.getFoodListPartOne()
+  }
+  /** 取得菜單一號 */
+  private getFoodListTwo() {
+    this.foodListPartTwo = this.dataSourceService.getFoodListPartTwo();
   }
 }

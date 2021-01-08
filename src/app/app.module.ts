@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { HeaderComponent } from './components/header/header.component';
 // material 
-
+import { MatIconModule } from '@angular/material/icon';
 //service
 import { DataSourceService } from './services/data-source.service';
 // store
@@ -29,6 +29,7 @@ import { MenuComponent } from './components/menu/menu.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatIconModule,
     StoreModule.forRoot({}, {}),
   ],
   providers: [
