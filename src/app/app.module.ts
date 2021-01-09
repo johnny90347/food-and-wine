@@ -16,6 +16,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { NewsComponent } from './components/news/news.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { PinnedHeaderDirective } from './core/directives/pinned-header.directive';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PinnedHeaderDirective } from './core/directives/pinned-header.directive
     BannerComponent,
     NewsComponent,
     MenuComponent,
-    PinnedHeaderDirective
+    PinnedHeaderDirective,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
