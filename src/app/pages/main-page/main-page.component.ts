@@ -31,6 +31,7 @@ export class MainPageComponent implements OnInit {
   }
 
   public scrolltest() {
+
     this.MyProp.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
     // this.foodMenuRef.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
   }

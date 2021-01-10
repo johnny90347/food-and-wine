@@ -1,6 +1,6 @@
 <section id="main-page">
-  <app-header></app-header>
-  <!-- <button (click)="scrolltest()">測試</button> -->
+  <!-- <app-header></app-header> -->
+  <button (click)="scrolltest()">測試</button>
   <!-- 置頂型header -->
   <app-header *ngIf="showPinnedHeader"
               class="pinned"
@@ -9,8 +9,12 @@
   <app-banner></app-banner>
   <!-- 最新消息 -->
   <app-news></app-news>
+
   <app-navigation></app-navigation>
-  <p #myElem></p>
+  <div class="anchor">
+    <p #myElem></p>
+  </div>
+
   <!-- 菜單 -->
   <app-menu></app-menu>
 </section>

@@ -1,21 +1,33 @@
 #main-page {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  app-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .pinned {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+  }
+
+  .anchor {
     position: relative;
+  }
 
-    app-header {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 2;
-    }
-
-    .pinned {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 3;
-    }
+  p {
+    position: absolute;
+    top: -100px;
+    // width: 100px;
+    // height: 10px;
+    // background-color: aquamarine;
+  }
 }
