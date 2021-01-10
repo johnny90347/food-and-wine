@@ -1,6 +1,5 @@
 #navigation {
   width: 100%;
-  // height: 280px;
   max-width: 1850px;
   margin: auto;
   .container {
@@ -9,39 +8,98 @@
     display: flex;
     flex-direction: row;
 
+    .left-area,
+    .right-area {
+      display: flex;
+      width: 50%;
+    }
+
     .box {
-      width: 25%;
-      padding: 0.5% 0.1%;
+      width: 50%;
+      padding: 0.5% 1%;
     }
 
     .reserve {
+      position: relative;
       height: calc(100vw * 0.16);
       padding: 1%;
       background-image: url("/assets/images/navigation/dessert.png");
-      background-size: cover;
+      background-size: 100%;
       background-repeat: no-repeat;
-      background-position: center center;
+      background-position: center;
+      align-self: end;
+      cursor: pointer;
+      transition: background-size 0.2s linear;
     }
     .special {
+      position: relative;
       height: calc(100vw * 0.16);
       background-image: url("/assets/images/navigation/seafood.png");
-      background-size: cover;
+      background-size: 100%;
       background-repeat: no-repeat;
       background-position: center center;
+      cursor: pointer;
+      transition: background-size 0.2s linear;
     }
     .food {
+      position: relative;
       height: calc(100vw * 0.16);
       background-image: url("/assets/images/navigation/bbq.png");
-      background-size: cover;
+      background-size: 100%;
       background-repeat: no-repeat;
       background-position: center center;
+      cursor: pointer;
+      transition: background-size 0.2s linear;
     }
     .wine {
+      position: relative;
       height: calc(100vw * 0.16);
       background-image: url("/assets/images/navigation/wine.png");
-      background-size: cover;
+      background-size: 100%;
       background-repeat: no-repeat;
       background-position: center center;
+      cursor: pointer;
+      transition: background-size 0.2s linear;
+    }
+
+    //文字內容
+    .title {
+      position: absolute;
+      bottom: 6%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 1.5rem;
+
+      transition: bottom 0.1s linear;
+
+      // transition-property: bottom;
+      // transition-duration: 0.1s;
+      // transition-timing-function: linear;
+    }
+
+    // 漸層黑色覆蓋,顯示文字
+    .reserve::before,
+    .special::before,
+    .food::before,
+    .wine::before {
+      content: "";
+      position: absolute;
+      top: 70%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 70%);
+    }
+
+    .reserve:hover,
+    .special:hover,
+    .food:hover,
+    .wine:hover {
+      background-size: 110%;
+      .title {
+        bottom: 10%;
+      }
     }
   }
 }
