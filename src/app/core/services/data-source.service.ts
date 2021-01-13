@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FoodList } from '@core/model/model';
+import { FoodList, WineList } from '@core/model/model';
 
 @Injectable({
   providedIn: 'root'
@@ -549,6 +549,184 @@ export class DataSourceService {
     },
   ]
 
+  /** 酒類的菜單-partOne */
+  public wineListPartOne: WineList[] = [
+    {
+      Type: "日本酒",
+      WineInfo: [
+        {
+          Recommend: false,
+          Name: "獺祭45純米大吟釀",
+          Price: '$1450/瓶',
+        },
+        {
+          Recommend: false,
+          Name: "獺祭三割九純米大吟釀",
+          Price: '$2180/瓶',
+        },
+        {
+          Recommend: false,
+          Name: "獺祭二割三純米大吟釀",
+          Price: '$3680/瓶',
+        },
+        {
+          Recommend: false,
+          Name: "霧峰初露純米吟釀",
+          Price: '$1080/瓶',
+        },
+        {
+          Recommend: false,
+          Name: "耐燒",
+          Price: '$120/杯、1300/瓶',
+        },
+        {
+          Recommend: false,
+          Name: "溫清酒",
+          Price: '$120/壺',
+        },
+        {
+          Recommend: false,
+          Name: "冰清酒",
+          Price: '$120/壺',
+        },
+      ]
+    },
+    {
+      Type: "啤酒",
+      WineInfo: [
+        {
+          Recommend: false,
+          Name: "Heineken 海尼根生啤酒",
+          Price: '$150/杯',
+        },
+        {
+          Recommend: false,
+          Name: "Suntory 三得利生啤酒",
+          Price: '$150/杯',
+        },
+        {
+          Recommend: false,
+          Name: "台啤十八天生啤酒",
+          Price: '$120/瓶',
+        },
+        {
+          Recommend: false,
+          Name: "台啤經典",
+          Price: '$100/瓶',
+        },
+        {
+          Recommend: false,
+          Name: "金牌啤酒",
+          Price: '$100/瓶',
+        },
+        {
+          Recommend: false,
+          Name: "Heineken 海尼根啤酒",
+          Price: '$130/瓶',
+        },
+        {
+          Recommend: false,
+          Name: "Sapporo 北海道啤酒",
+          Price: '$140/瓶',
+        },
+        {
+          Recommend: false,
+          Name: "Asahi 朝日啤酒",
+          Price: '$140/瓶',
+        },
+      ]
+    },
+  ]
+
+  /** 酒類菜單-partTwo */
+  public wineListPartTwo: WineList[] = [
+    {
+      Type: "威士忌",
+      WineInfo: [
+        {
+          Recommend: false,
+          Name: "百富單一麥芽12年/思佩賽區/蘇格蘭",
+          Price: '$1700/瓶',
+        },
+        {
+          Recommend: false,
+          Name: "拉弗格單一麥芽10年/艾雷島/蘇格蘭",
+          Price: '$1400/瓶',
+        },
+        {
+          Recommend: false,
+          Name: "布什米爾黑樽威士忌/愛爾蘭",
+          Price: '$1100/瓶',
+        },
+      ]
+    },
+    {
+      Type: "葡萄酒",
+      WineInfo: [
+        {
+          Recommend: false,
+          Name: "義大利拿波里白皮諾白酒2018",
+          Price: '$800/瓶',
+        },
+      ]
+    },
+    {
+      Type: "特殊酒",
+      WineInfo: [
+        {
+          Recommend: false,
+          Name: "Choya 蝶矢 無添加本格梅酒",
+          Price: '$120/壺',
+        },
+        {
+          Recommend: false,
+          Name: "Choya 蝶矢 梅酒",
+          Price: '$180/壺',
+        },
+        {
+          Recommend: false,
+          Name: "Choya 蝶矢 柚子酒",
+          Price: '$180/壺',
+        },
+        {
+          Recommend: false,
+          Name: "Highball",
+          Price: '$120/杯',
+        },
+      ]
+    },
+    {
+      Type: "無酒精飲料",
+      WineInfo: [
+        {
+          Recommend: false,
+          Name: "烏龍茶(冰)(無糖)",
+          Price: '$50/杯',
+        },
+        {
+          Recommend: false,
+          Name: "可爾必思",
+          Price: '$50/杯',
+        },
+        {
+          Recommend: false,
+          Name: "蘋果西打",
+          Price: '$60/瓶',
+        },
+        {
+          Recommend: false,
+          Name: "雪碧",
+          Price: '$50/瓶',
+        },
+        {
+          Recommend: false,
+          Name: "可樂",
+          Price: '$50/瓶',
+        },
+      ]
+    },
+  ]
+
   /** 取得菜單一號 */
   public getFoodListPartOne(): FoodList[] {
     return this.foodListPartOne;
@@ -557,5 +735,15 @@ export class DataSourceService {
   /** 取得菜單二號 */
   public getFoodListPartTwo(): FoodList[] {
     return this.foodListPartTwo;
+  }
+
+  /** 取得酒單一號 */
+  public getWineListPartOne(): WineList[] {
+    return this.wineListPartOne;
+  }
+
+  /** 取得酒單二號 */
+  public getWineListPartTwo(): WineList[] {
+    return this.wineListPartTwo;
   }
 }

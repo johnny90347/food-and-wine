@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { HeaderComponent } from './components/header/header.component';
-// material 
+// material
 import { MatIconModule } from '@angular/material/icon';
 //service
 import { DataSourceService } from '@core/services/data-source.service';
@@ -14,9 +14,10 @@ import { DataSourceService } from '@core/services/data-source.service';
 import { StoreModule } from '@ngrx/store';
 import { BannerComponent } from './components/banner/banner.component';
 import { NewsComponent } from './components/news/news.component';
-import { MenuComponent } from './components/menu/menu.component';
 import { PinnedHeaderDirective } from './core/directives/pinned-header.directive';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { FoodMenuComponent } from './components/food-menu/food-menu.component';
+import { WineMenuComponent } from './components/wine-menu/wine-menu.component';
 
 @NgModule({
   declarations: [
@@ -25,9 +26,10 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     HeaderComponent,
     BannerComponent,
     NewsComponent,
-    MenuComponent,
     PinnedHeaderDirective,
-    NavigationComponent
+    NavigationComponent,
+    FoodMenuComponent,
+    WineMenuComponent
   ],
   imports: [
     BrowserModule,
