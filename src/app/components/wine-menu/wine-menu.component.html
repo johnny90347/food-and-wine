@@ -1,1 +1,40 @@
-<p>wine-menu works!</p>
+<section id="wine-menu">
+    <div class="title">
+    </div>
+    <div class="container">
+        <!-- 左半區 -->
+        <div class="left-area">
+            <div *ngFor="let item of wineListPartOne">
+                <div class="item-group">
+                    <div class="subject">{{item.Type}}</div>
+                    <div class="food-item"
+                         *ngFor="let info of item.WineInfo">
+                        <div class="recommend">
+                            <mat-icon *ngIf="info.Recommend">thumb_up</mat-icon>
+                        </div>
+                        <div class="name">{{info.Name}}</div>
+                        <div class="price">${{info.Price}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 中央間隔 -->
+        <div class="mid"></div>
+        <!-- 右半區 -->
+        <div class="right-area">
+            <div *ngFor="let item of wineListPartTwo">
+                <div class="item-group">
+                    <div class="subject">{{item.Type}}</div>
+                    <div class="food-item"
+                         *ngFor="let info of item.WineInfo">
+                        <div class="recommend">
+                            <mat-icon *ngIf="info.Recommend">thumb_up</mat-icon>
+                        </div>
+                        <div class="name">{{info.Name}}</div>
+                        <div class="price">${{info.Price}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

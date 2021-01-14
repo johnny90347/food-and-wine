@@ -1,0 +1,206 @@
+@import "variable.scss";
+
+#wine-menu {
+    width: 100%;
+    max-width: 1850px;
+    margin: auto;
+
+    .title {
+        position: relative;
+        height: 100px;
+        width: 200px;
+        background-image: url("/assets/images/bg/brush-red.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        margin-bottom: 10px;
+    }
+
+    .title::before {
+        position: absolute;
+        content: "最新酒單";
+        top: 50px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 1850px;
+        margin: 0 auto;
+
+        // 左半區
+        .left-area {
+            width: 50%;
+
+            .item-group {
+                width: 100%;
+                border: 4px solid #9a7855;
+                padding: 50px 15px 30px 15px;
+                margin-bottom: 4%;
+
+                .subject {
+                    width: 100%;
+                    text-align: center;
+                    position: relative;
+                    font-size: 2rem;
+                    height: 50px;
+                    line-height: 50px;
+                    margin-bottom: 30px;
+                }
+
+                .subject::before {
+                    position: absolute;
+                    content: "";
+                    top: -5px;
+                    height: 5px;
+                    left: 45%;
+                    right: 45%;
+                    background-color: #9a7855;
+                }
+
+                // 標題
+                .title {
+                    display: flex;
+                    height: 30px;
+                    line-height: 30px;
+                }
+
+                //食物
+                .food-item {
+                    position: relative;
+                    display: flex;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 1.2rem;
+
+                    // 推薦
+                    .recommend {
+                        width: 30px;
+                        text-align: right;
+
+                        .mat-icon {
+                            line-height: 30px;
+                            font-size: 1rem;
+                            color: #be0027;
+                        }
+                    }
+
+                    // 食物名
+                    .name {
+                        flex: 3;
+                        padding-left: 2%;
+                    }
+
+                    //價格
+                    .price {
+                        flex: 1;
+                        text-align: start;
+                        padding-left: 2%;
+                    }
+
+                }
+
+                .food-item::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 1px;
+                    background-color: $color-background-black-4;
+                }
+            }
+        }
+
+        // 中央間隔
+        .mid {
+            width: 2%;
+        }
+
+        // 右半區
+        .right-area {
+            width: 50%;
+
+            .item-group {
+                width: 100%;
+                border: 4px solid #9a7855;
+                padding: 50px 15px 30px 15px;
+                margin-bottom: 4%;
+
+                .subject {
+                    width: 100%;
+                    text-align: center;
+                    position: relative;
+                    font-size: 2rem;
+                    height: 50px;
+                    line-height: 50px;
+                    margin-bottom: 30px;
+                }
+
+                .subject::before {
+                    position: absolute;
+                    content: "";
+                    top: -5px;
+                    height: 5px;
+                    left: 45%;
+                    right: 45%;
+                    background-color: #9a7855;
+                }
+
+                // 標題
+                .title {
+                    display: flex;
+                    height: 30px;
+                    line-height: 30px;
+                }
+
+                //食物
+                .food-item {
+                    position: relative;
+                    display: flex;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 1.2rem;
+
+                    .recommend {
+                        width: 30px;
+                        text-align: right;
+
+                        .mat-icon {
+                            line-height: 30px;
+                            font-size: 1rem;
+                            color: #be0027;
+                        }
+                    }
+
+                    .name {
+                        flex: 3;
+                        padding-left: 2%;
+                    }
+
+                    .price {
+                        flex: 1;
+                        text-align: start;
+                        padding-left: 2%;
+                    }
+                }
+
+                .food-item::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 1px;
+                    background-color: $color-background-black-4;
+                }
+            }
+        }
+    }
+}
