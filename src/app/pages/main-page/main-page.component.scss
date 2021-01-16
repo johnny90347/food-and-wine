@@ -19,15 +19,15 @@
     z-index: 3;
   }
 
-  .anchor {
+  .special-menu-anchor,
+  .food-menu-anchor,
+  .wine-menu-anchor,
+  .location-anchor {
     position: relative;
   }
 
   p {
     position: absolute;
     top: -100px;
-    // width: 100px;
-    // height: 10px;
-    // background-color: aquamarine;
   }
 }
