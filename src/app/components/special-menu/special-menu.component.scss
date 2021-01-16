@@ -1,0 +1,99 @@
+@import "variable.scss";
+
+#special-menu {
+  width: 100%;
+  max-width: 1850px;
+  margin: auto;
+  .title {
+    position: relative;
+    height: 100px;
+    width: 200px;
+    background-image: url("/assets/images/bg/brush-red.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    margin-bottom: 10px;
+  }
+  .title::before {
+    position: absolute;
+    content: "預定料理";
+    top: 50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vw * 1 / 2 * 1.5 / 5);
+    .left-area {
+      display: flex;
+      width: 50%;
+      border: 3px solid $color-background-black-4;
+      .image {
+        width: calc(100vw * 1 / 2 * 1.5 / 5);
+        background-image: url("/assets/images/spcial/stone-hot-pot.png");
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    .right-area {
+      display: flex;
+      width: 50%;
+      border: 1px solid $color-background-black-4;
+
+      .image {
+        width: calc(100vw * 1 / 2 * 1.5 / 5);
+        background-image: url("/assets/images/spcial/sumo-hot-pot.jpg");
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    .center-padding {
+      width: 2%;
+      height: 2%;
+    }
+
+    .description {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .name {
+        position: relative;
+        width: 100%;
+        margin-top: 3%;
+        margin-bottom: 5%;
+        font-size: 2rem;
+        line-height: 2rem;
+        padding-left: 20%;
+        span {
+          margin-left: 2%;
+          font-size: 1rem;
+          line-height: 2rem;
+        }
+      }
+
+      .name::before {
+        position: absolute;
+        content: "";
+        top: -15px;
+        height: 5px;
+        left: 20%;
+        right: 50%;
+        background-color: #9a7855;
+      }
+
+      .content {
+        width: 100%;
+        text-align: start;
+        padding-left: 20%;
+      }
+    }
+  }
+}

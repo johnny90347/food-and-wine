@@ -18,6 +18,9 @@ import { PinnedHeaderDirective } from './core/directives/pinned-header.directive
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FoodMenuComponent } from './components/food-menu/food-menu.component';
 import { WineMenuComponent } from './components/wine-menu/wine-menu.component';
+import { SpecialMenuComponent } from './components/special-menu/special-menu.component';
+import { LocationComponent } from './components/location/location.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { WineMenuComponent } from './components/wine-menu/wine-menu.component';
     PinnedHeaderDirective,
     NavigationComponent,
     FoodMenuComponent,
-    WineMenuComponent
+    WineMenuComponent,
+    SpecialMenuComponent,
+    LocationComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
