@@ -1,4 +1,11 @@
 <section id="banner">
     <!-- <img src="assets/images/foods/BBQ4.jpg"> -->
-    <div class="img"></div>
+    <div class="mask"></div>
+    <div class="warpper"
+         *ngFor="let pic of showPic"
+         [@inOutAnimation]>
+        <div class="img"
+             [ngStyle]="{'background-image': 'url(/assets/images/foods/' + pic + ')'}"></div>
+    </div>
+
 </section>

@@ -13,3 +13,17 @@ export const headerSlideAnimation = trigger('headerSlideAnimation', [
   ])
 ]
 );
+
+export const inOutAnimation = trigger('inOutAnimation', [
+  transition(':enter', [
+    style({ opacity: 0 }),
+    animate('1.5s linear',
+      style({ opacity: 1 }))
+  ]),
+  transition(':leave', [
+    style({ opacity: 1 }),
+    animate('1.5s linear',
+      style({ opacity: 0 }))
+  ])
+]
+);
