@@ -20,15 +20,15 @@ export class MainPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  /** 滾動監聽 */
-  @HostListener("window:scroll", ['$event'])
-  onWindowScroll() {
-    if (window.pageYOffset >= 100) {
-      this.showPinnedHeader = true;
-    } else {
-      this.showPinnedHeader = false;
-    }
-  }
+  // /** 滾動監聽 */
+  // @HostListener("window:scroll", ['$event'])
+  // onWindowScroll() {
+  //   if (window.pageYOffset >= 100) {
+  //     this.showPinnedHeader = true;
+  //   } else {
+  //     this.showPinnedHeader = false;
+  //   }
+  // }
 
   public scrolltest() {
 

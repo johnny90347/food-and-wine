@@ -31,7 +31,7 @@ export class BannerComponent implements OnInit {
         this.showPic.push(this.bannerList[this.index % 3]);
       }, 1500);
 
-    }, 6500);
+    }, 8500);
 
     // setTimeout(() => {
     //   this.showPic.push(this.bannerList[this.index]);

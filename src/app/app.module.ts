@@ -21,6 +21,7 @@ import { WineMenuComponent } from './components/wine-menu/wine-menu.component';
 import { SpecialMenuComponent } from './components/special-menu/special-menu.component';
 import { LocationComponent } from './components/location/location.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HeadComponent } from './components/head/head.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { FooterComponent } from './components/footer/footer.component';
     WineMenuComponent,
     SpecialMenuComponent,
     LocationComponent,
-    FooterComponent
+    FooterComponent,
+    HeadComponent
   ],
   imports: [
     BrowserModule,
