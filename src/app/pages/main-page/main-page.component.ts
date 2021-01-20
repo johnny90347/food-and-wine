@@ -1,6 +1,9 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { headerSlideAnimation } from '../../core/animation/animation';
 import * as smoothscroll from "smoothscroll-polyfill";
+import { select, Store } from '@ngrx/store';
+import { GlobalState } from '@core/store/state';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-main-page',
@@ -13,11 +16,12 @@ import * as smoothscroll from "smoothscroll-polyfill";
 export class MainPageComponent implements OnInit {
 
   public showPinnedHeader = false; // 顯示置頂
-  @ViewChild("myElem") MyProp: ElementRef;
+  @ViewChild("special") specialEl: ElementRef;
 
-  constructor() { smoothscroll.polyfill(); }
+  constructor(private store: Store<GlobalState>) { smoothscroll.polyfill(); }
 
   ngOnInit(): void {
+    this.listenScrollToSpecial();
   }
 
   // /** 滾動監聽 */
@@ -32,7 +36,22 @@ export class MainPageComponent implements OnInit {
 
   public scrolltest() {
 
-    this.MyProp.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    this.specialEl.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
     // this.foodMenuRef.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+
+  private listenScrollToSpecial() {
+    this.store.pipe(
+      select(state => state.scrollToSpecial),
+      tap((value) => {
+        if (value === 0) return;
+        this.scrollToSpecialPosition();
+      })
+    ).subscribe();
+  }
+
+  private scrollToSpecialPosition() {
+    this.specialEl.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 }

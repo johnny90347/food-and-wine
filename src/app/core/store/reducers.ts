@@ -3,20 +3,20 @@ import { scrollToFoodMenuUpdate, scrollToLocationUpdate, scrollToSpecialUpdate }
 
 export const scrollToSpecialReducer = createReducer<number>(
   0,
-  on(scrollToSpecialUpdate, (state, action) => state++)
+  on(scrollToSpecialUpdate, (state, action) => state + 1)
 );
 
 export const scrollToFoodMenuReducer = createReducer<number>(
   0,
-  on(scrollToFoodMenuUpdate, (state, action) => state++)
+  on(scrollToFoodMenuUpdate, (state, action) => state + 1)
 );
 
 export const scrollToWineMenuReducer = createReducer<number>(
   0,
-  on(scrollToFoodMenuUpdate, (state, action) => state++)
+  on(scrollToFoodMenuUpdate, (state, action) => state + 1)
 );
 
 export const scrollToLocationReducer = createReducer<number>(
   0,
-  on(scrollToLocationUpdate, (state, action) => state++)
+  on(scrollToLocationUpdate, (state, action) => state + 1)
 );

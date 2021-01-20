@@ -1,4 +1,8 @@
+import { GlobalState } from './../../core/store/state';
+import { AppService } from '@core/services/app.service';
 import { Component, HostListener, OnInit } from '@angular/core';
+import { select, Store } from '@ngrx/store';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-head',
@@ -9,7 +13,7 @@ export class HeadComponent implements OnInit {
 
   public fixHeader = false;
 
-  constructor() { }
+  constructor(private appService: AppService) { }
 
   /** 滾動監聽 */
   @HostListener("window:scroll", ['$event'])
@@ -22,6 +26,15 @@ export class HeadComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
   }
+
+  /** 觸發滾動到預定料理 */
+  public sendScrollToSpecial() {
+    this.appService.triggerScrollToSpecialMenu();
+  }
+
+
+
 
 }

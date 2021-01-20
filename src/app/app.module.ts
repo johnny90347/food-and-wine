@@ -1,3 +1,4 @@
+import { scrollToFoodMenuReducer, scrollToLocationReducer, scrollToSpecialReducer, scrollToWineMenuReducer } from './core/store/reducers';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 //service
 import { DataSourceService } from '@core/services/data-source.service';
+import { AppService } from '@core/services/app.service';
 // store
 import { StoreModule } from '@ngrx/store';
 import { BannerComponent } from './components/banner/banner.component';
@@ -44,10 +46,16 @@ import { HeadComponent } from './components/head/head.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({
+      scrollToSpecial: scrollToSpecialReducer,
+      scrollToFoodMenu: scrollToFoodMenuReducer,
+      scrollToWineMenu: scrollToWineMenuReducer,
+      scrollToLocation: scrollToLocationReducer
+    })
   ],
   providers: [
-    DataSourceService
+    DataSourceService,
+    AppService
   ],
   bootstrap: [AppComponent]
 })
