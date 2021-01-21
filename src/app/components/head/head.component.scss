@@ -57,6 +57,9 @@
     position: fixed;
     top: 0;
     animation: slide_down 0.3s linear 1;
+
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 60%, rgba(0, 0, 0, 0) 100%);
+
   }
 }
 
