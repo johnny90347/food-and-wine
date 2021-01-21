@@ -34,7 +34,20 @@ export class HeadComponent implements OnInit {
     this.appService.triggerScrollToSpecialMenu();
   }
 
+  /** 觸發滾動到最新菜單 */
+  public sendScrollToFoodMenu() {
+    this.appService.triggerScrollToFoodMenu();
+  }
 
+  /** 觸發滾動到最新酒單 */
+  public sendScrollToWineMenu() {
+    this.appService.triggerScrollToWineMenu();
+  }
+
+  /** 觸發滾動到最新位置 */
+  public sendScrollToPosition() {
+    this.appService.triggerScrollToLocation();
+  }
 
 
 }

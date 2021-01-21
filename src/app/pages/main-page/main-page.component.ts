@@ -16,42 +16,77 @@ import { tap } from 'rxjs/operators';
 export class MainPageComponent implements OnInit {
 
   public showPinnedHeader = false; // 顯示置頂
-  @ViewChild("special") specialEl: ElementRef;
+  @ViewChild("specialAnchor") specialAnchorEl: ElementRef;
+  @ViewChild("foodAnchor") foodAnchorEl: ElementRef;
+  @ViewChild("wineAnchor") wineAnchorEl: ElementRef;
+  @ViewChild("locationAnchor") locationAnchorEl: ElementRef;
 
   constructor(private store: Store<GlobalState>) { smoothscroll.polyfill(); }
 
   ngOnInit(): void {
     this.listenScrollToSpecial();
+    this.listenScrollToFoodMenu();
+    this.listenScrollToWineMenu();
+    this.listenScrollToPosition();
   }
 
-  // /** 滾動監聽 */
-  // @HostListener("window:scroll", ['$event'])
-  // onWindowScroll() {
-  //   if (window.pageYOffset >= 100) {
-  //     this.showPinnedHeader = true;
-  //   } else {
-  //     this.showPinnedHeader = false;
-  //   }
-  // }
-
-  public scrolltest() {
-
-    this.specialEl.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
-    // this.foodMenuRef.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-
-
+  // 監聽滾動到預定菜單
   private listenScrollToSpecial() {
     this.store.pipe(
       select(state => state.scrollToSpecial),
       tap((value) => {
         if (value === 0) return;
-        this.scrollToSpecialPosition();
+        this.scrollToSpecialOffset();
       })
     ).subscribe();
   }
 
-  private scrollToSpecialPosition() {
-    this.specialEl.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
+  // 監聽滾動到最新菜單
+  private listenScrollToFoodMenu() {
+    this.store.pipe(
+      select(state => state.scrollToFoodMenu),
+      tap((value) => {
+        if (value === 0) return;
+        this.scrollToFoodMenuOffset();
+      })
+    ).subscribe();
+  }
+
+  // 監聽滾動到最新酒單
+  private listenScrollToWineMenu() {
+    this.store.pipe(
+      select(state => state.scrollToWineMenu),
+      tap((value) => {
+        if (value === 0) return;
+        this.scrollToWineMenuOffset();
+      })
+    ).subscribe();
+  }
+
+  // 監聽滾動到店家位置
+  private listenScrollToPosition() {
+    this.store.pipe(
+      select(state => state.scrollToLocation),
+      tap((value) => {
+        if (value === 0) return;
+        this.scrollToLocationOffset();
+      })
+    ).subscribe();
+  }
+
+  private scrollToSpecialOffset() {
+    this.specialAnchorEl.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  private scrollToFoodMenuOffset() {
+    this.foodAnchorEl.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  private scrollToWineMenuOffset() {
+    this.wineAnchorEl.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  private scrollToLocationOffset() {
+    this.locationAnchorEl.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 }

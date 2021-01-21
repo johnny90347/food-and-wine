@@ -7,9 +7,12 @@
     <div class="navigate">
       <div class="item"
            (click)="sendScrollToSpecial()">預定料理</div>
-      <div class="item">最新菜單</div>
-      <div class="item">最新酒單</div>
-      <div class="item">營業與交通資訊</div>
+      <div class="item"
+           (click)="sendScrollToFoodMenu()">最新菜單</div>
+      <div class="item"
+           (click)="sendScrollToWineMenu()">最新酒單</div>
+      <div class="item"
+           (click)="sendScrollToPosition()">營業與交通資訊</div>
     </div>
   </div>
 </section>
