@@ -130,7 +130,7 @@
 // RWD
 @media screen and (min-width: 1300px) {}
 
-@media screen and (min-width: 0px) and (max-width: 1000px) {
+@media screen and (min-width: 470px) and (max-width: 1000px) {
 
   #special-menu {
     .wrapper {
@@ -145,6 +145,49 @@
       .right-area {
         width: 100%;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 469px) {
+  #special-menu {
+    .wrapper {
+      flex-direction: column;
+      height: auto;
+
+      .left-area {
+        width: 100%;
+        margin-bottom: 5%;
+        flex-direction: column;
+
+        .image {
+          background-size: 100% auto;
+          width: 100%;
+        }
+      }
+
+      .right-area {
+        width: 100%;
+        flex-direction: column;
+
+        .image {
+          background-size: 100% auto;
+          width: 100%;
+        }
+      }
+
+      .description {
+
+
+        padding-bottom: 30px;
+
+        .name::before {
+
+          height: 0px;
+
+        }
+      }
+
     }
   }
 }
