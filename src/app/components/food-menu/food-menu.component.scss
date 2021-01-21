@@ -4,6 +4,7 @@
   width: 100%;
   max-width: 1850px;
   margin: auto;
+
   .title {
     position: relative;
     height: 100px;
@@ -205,6 +206,24 @@
           height: 1px;
           background-color: $color-background-black-4;
         }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+
+  #food-menu {
+    .container {
+      flex-direction: column;
+
+      .left-area {
+        width: 100%;
+      }
+
+      .right-area {
+        width: 100%;
       }
     }
   }

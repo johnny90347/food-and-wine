@@ -63,6 +63,7 @@
   }
 }
 
+
 @keyframes slide_down {
   from {
     top: -100px;
@@ -70,5 +71,20 @@
 
   to {
     top: 0;
+  }
+}
+
+
+// RWD
+@media screen and (min-width: 0px) and (max-width: 700px) {
+
+  #head {
+    .container {
+      .navigate {
+        .item {
+          margin: 0 5px;
+        }
+      }
+    }
   }
 }

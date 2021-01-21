@@ -99,7 +99,7 @@
 
                     //價格
                     .price {
-                        flex: 1;
+                        flex: 2;
                         text-align: start;
                         padding-left: 2%;
                     }
@@ -200,6 +200,24 @@
                     height: 1px;
                     background-color: $color-background-black-4;
                 }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+
+    #wine-menu {
+        .container {
+            flex-direction: column;
+
+            .left-area {
+                width: 100%;
+            }
+
+            .right-area {
+                width: 100%;
             }
         }
     }
