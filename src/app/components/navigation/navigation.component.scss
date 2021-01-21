@@ -2,6 +2,7 @@
   width: 100%;
   max-width: 1850px;
   margin: auto;
+
   .container {
     width: 100%;
     height: 100%;
@@ -31,6 +32,7 @@
       cursor: pointer;
       transition: background-size 0.2s linear;
     }
+
     .special {
       position: relative;
       height: calc(100vw * 0.16);
@@ -41,6 +43,7 @@
       cursor: pointer;
       transition: background-size 0.2s linear;
     }
+
     .food {
       position: relative;
       height: calc(100vw * 0.16);
@@ -51,6 +54,7 @@
       cursor: pointer;
       transition: background-size 0.2s linear;
     }
+
     .wine {
       position: relative;
       height: calc(100vw * 0.16);
@@ -97,9 +101,35 @@
     .food:hover,
     .wine:hover {
       background-size: 110%;
+
       .title {
         bottom: 10%;
       }
     }
   }
+}
+
+// RWD
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 667px) and (max-width: 1023px) {
+
+  // 如果使用者之視窗寬度介於 768px ~ 979px，將會再載入這裡的 CSS。
+  html {
+    // font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 667px) {
+
+  // 如果使用者之視窗寬度 <= 768px，將會再載入這裡的 CSS。
+  html {
+    // font-size: 7px;
+  }
+}
+
+@media screen and (max-device-width: 480px) {
+
+  // 如果使用者之裝置寬度 <= 480px，將會再載入這裡的 CSS。
+
 }

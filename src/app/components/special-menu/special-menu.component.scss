@@ -4,6 +4,7 @@
   width: 100%;
   max-width: 1850px;
   margin: auto;
+
   .title {
     position: relative;
     height: 100px;
@@ -14,6 +15,7 @@
     background-position: center center;
     margin-bottom: 10px;
   }
+
   .title::before {
     position: absolute;
     content: "預定料理";
@@ -23,33 +25,56 @@
     text-align: center;
     font-size: 1.5rem;
   }
+
   .wrapper {
     display: flex;
     flex-direction: row;
-    height: calc(100vw * 1 / 2 * 1.5 / 5);
+
     .left-area {
       display: flex;
       width: 50%;
       border: 3px solid $color-background-black-4;
+      position: relative;
+
       .image {
         width: calc(100vw * 1 / 2 * 1.5 / 5);
+        height: calc(100vw * 1 / 2 * 1.5 / 5);
+        min-width: 200px;
+        min-height: 200px;
         background-image: url("/assets/images/spcial/stone-hot-pot.png");
         background-size: auto 100%;
         background-repeat: no-repeat;
         background-position: center;
       }
+
+      .price {
+        position: absolute;
+        right: 5px;
+        bottom: 0;
+      }
     }
+
     .right-area {
       display: flex;
       width: 50%;
       border: 1px solid $color-background-black-4;
-
+      position: relative;
       .image {
         width: calc(100vw * 1 / 2 * 1.5 / 5);
+        height: calc(100vw * 1 / 2 * 1.5 / 5);
+        min-width: 200px;
+        min-height: 200px;
         background-image: url("/assets/images/spcial/sumo-hot-pot.jpg");
         background-size: auto 100%;
         background-repeat: no-repeat;
         background-position: center;
+      }
+
+
+      .price {
+        position: absolute;
+        right: 5px;
+        bottom: 0;
       }
     }
 
@@ -64,14 +89,16 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
       .name {
         position: relative;
-        width: 100%;
+        // width: 100%;
         margin-top: 3%;
         margin-bottom: 5%;
         font-size: 2rem;
         line-height: 2rem;
-        padding-left: 20%;
+        // padding-left: 25%;
+
         span {
           margin-left: 2%;
           font-size: 1rem;
@@ -84,16 +111,53 @@
         content: "";
         top: -15px;
         height: 5px;
-        left: 20%;
-        right: 50%;
+        left: 0;
+        right: 0;
         background-color: #9a7855;
       }
 
       .content {
-        width: 100%;
+        // width: 50%;
         text-align: start;
-        padding-left: 20%;
+        // padding-left: 25%;
       }
     }
   }
+}
+
+
+// RWD
+@media screen and (min-width: 1300px) {}
+
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+
+  #special-menu {
+    .wrapper {
+      flex-direction: column;
+      height: auto;
+
+      .left-area {
+        width: 100%;
+        margin: 10px 0px;
+      }
+
+      .right-area {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 667px) {
+
+  // 如果使用者之視窗寬度 <= 768px，將會再載入這裡的 CSS。
+  html {
+    // font-size: 7px;
+  }
+}
+
+@media screen and (max-device-width: 480px) {
+
+  // 如果使用者之裝置寬度 <= 480px，將會再載入這裡的 CSS。
+
 }
